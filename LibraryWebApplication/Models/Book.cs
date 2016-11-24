@@ -18,10 +18,10 @@ namespace LibraryWebApplication.Models
         [MinLength(2), MaxLength(50)]
         public string Author { get; set; }
 
-        [Required]
+        [Required, MaxLength(1024 * 1024)]
         public byte[] CoverPicture { get; set; }
 
-        [Required, MaxLength(1024*1024)]
+        [Required]
         public Genre Genre { get; set; }
     }
 
