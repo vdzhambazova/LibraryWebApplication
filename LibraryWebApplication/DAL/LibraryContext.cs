@@ -1,11 +1,8 @@
+using System.Data.Entity;
 using LibraryWebApplication.Models;
 
-namespace LibraryWebApplication
+namespace LibraryWebApplication.DAL
 {
-    using System;
-    using System.Data.Entity;
-    using System.Linq;
-
     public class LibraryContext : DbContext
     {
         public LibraryContext()

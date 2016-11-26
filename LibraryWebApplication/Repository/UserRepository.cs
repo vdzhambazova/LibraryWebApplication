@@ -1,11 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using LibraryWebApplication.Contracts;
+using LibraryWebApplication.DAL;
+using LibraryWebApplication.Models;
 
 namespace LibraryWebApplication.Repository
 {
-    public class Repository
+    public class UserRepository : IUserRepository
     {
+        private LibraryContext libraryContext;
+
+        public UserRepository()
+        {
+            this.libraryContext = new LibraryContext();
+        }
+
+        public void Add(User entity)
+        {
+            this.libraryContext.Users.Add(entity);
+        }
+
+        public User GetByName(string name)
+        {
+            User user = this.libraryContext.Users
+                .First(u => u.Username == name);
+
+            return user;
+        }
     }
 }

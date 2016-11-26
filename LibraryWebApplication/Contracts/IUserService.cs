@@ -2,5 +2,10 @@
 {
     public interface IUserService
     {
+        //Register
+
+        //Find existing user
+
+
     }
 }

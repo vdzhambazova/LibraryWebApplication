@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace LibraryWebApplication.Services
+namespace LibraryWebApplication.DTOs
 {
-    public class UserService: IUserService
+    public class BookDto
     {
     }
 }

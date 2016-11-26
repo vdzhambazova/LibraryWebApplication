@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Linq.Expressions;
+using LibraryWebApplication.Models;
 
 namespace LibraryWebApplication.Contracts
 {
-    interface IRepository
+    public interface IUserRepository
     {
+        void Add(User entity);
+
+        User GetByName(string name);
     }
 }
+

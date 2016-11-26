@@ -5,7 +5,7 @@ using System.Web;
 
 namespace LibraryWebApplication.Services
 {
-    public class BookService
+    public class BookService: IBookService
     {
     }
 }
