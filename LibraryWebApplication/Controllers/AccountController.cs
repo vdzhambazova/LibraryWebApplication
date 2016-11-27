@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using AutoMapper;
 using LibraryWebApplication.Contracts;
 using LibraryWebApplication.Dtos;
@@ -33,20 +29,33 @@ namespace LibraryWebApplication.Controllers
         {
             string userName = dto.Username;
             User user = this.userService.GetByName(userName);
-            return View();
+            if (user.Password != dto.Password)
+            {
+                ModelState.AddModelError("Password", "Incorrect password.");
+                return View("Login");
+            }
+
+            return View("~/Views/BookList/BookList.cshtml");
         }
 
         public ActionResult Register(UserDto dto)
         {
+            
             return View();
         }
 
         public ActionResult RegisterUser(UserDto dto)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("Register");
+            }
+
             User user = null;
             user = DTOParser.Parse(dto, user);
             this.userService.Add(user);
-            return View("Register");
+
+            return View("Login");
         }
     }
 }

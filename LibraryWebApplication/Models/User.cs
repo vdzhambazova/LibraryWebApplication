@@ -1,11 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using LibraryWebApplication.Attributes;
+using LibraryWebApplication.Utility;
 
 namespace LibraryWebApplication.Models
 {
     public class User
     {
+
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
