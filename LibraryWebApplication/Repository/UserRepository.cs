@@ -18,6 +18,7 @@ namespace LibraryWebApplication.Repository
         public void Add(User entity)
         {
             this.libraryContext.Users.Add(entity);
+            this.libraryContext.SaveChanges();
         }
 
         public User GetByName(string name)

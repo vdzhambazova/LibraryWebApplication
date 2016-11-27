@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Web;
-using System.Web.Profile;
 using LibraryWebApplication.Attributes;
 
 namespace LibraryWebApplication.Models
@@ -15,9 +10,10 @@ namespace LibraryWebApplication.Models
         public int Id { get; set; }
 
         [MinLength(5), MaxLength(20), Required]
+        [Index(IsUnique = true)]
         public string Username { get; set; }
 
-        [Required, Password(6, 50, ShouldContainLowercase = true, ShouldContainDigit = true, ShouldContainSpecialSymbol = false, ShouldContainUppercase = true)]
+        //[Required, Password(6, 50, ShouldContainLowercase = true, ShouldContainDigit = true, ShouldContainSpecialSymbol = false, ShouldContainUppercase = true)]
         public string Password { get; set; }
 
     }

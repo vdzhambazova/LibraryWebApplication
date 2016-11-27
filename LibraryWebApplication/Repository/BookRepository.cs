@@ -19,12 +19,15 @@ namespace LibraryWebApplication.Repository
 
         public void Add(Book entity)
         {
-            throw new NotImplementedException();
+            this.libraryContext.Books.Add(entity);
+            this.libraryContext.SaveChanges();
         }
 
-        public HashSet<Book> GetByNameLike(string name)
+        public IQueryable<Book> GetByNameLike(string name)
         {
-            throw new NotImplementedException();
+            var bookResultSet = libraryContext.Books.Where(b => b.Name == name);
+
+            return bookResultSet;
         }
     }
 }

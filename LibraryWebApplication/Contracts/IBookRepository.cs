@@ -11,6 +11,6 @@ namespace LibraryWebApplication.Contracts
     {
         void Add(Book entity);
 
-        HashSet<Book> GetByNameLike(string name);
+        IQueryable<Book> GetByNameLike(string name);
     }
 }

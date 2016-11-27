@@ -1,11 +1,11 @@
-﻿namespace LibraryWebApplication.Services
+﻿using LibraryWebApplication.Models;
+
+namespace LibraryWebApplication.Contracts
 {
     public interface IUserService
     {
-        //Register
+        void Add(User entity);
 
-        //Find existing user
-
-
+        User GetByName(string name);
     }
 }

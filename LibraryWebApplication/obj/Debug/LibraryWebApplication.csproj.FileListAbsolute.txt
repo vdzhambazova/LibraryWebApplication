@@ -47,3 +47,9 @@ C:\Users\Teo\Documents\GitHub\LibraryWebApplication\LibraryWebApplication\bin\Sy
 C:\Users\Teo\Documents\GitHub\LibraryWebApplication\LibraryWebApplication\bin\System.Web.Mvc.xml
 C:\Users\Teo\Documents\GitHub\LibraryWebApplication\LibraryWebApplication\obj\Debug\LibraryWebApplication.dll
 C:\Users\Teo\Documents\GitHub\LibraryWebApplication\LibraryWebApplication\obj\Debug\LibraryWebApplication.pdb
+C:\Users\Teo\Documents\GitHub\LibraryWebApplication\LibraryWebApplication\obj\Debug\LibraryWebApplication.csprojResolveAssemblyReference.cache
+C:\Users\Teo\Documents\GitHub\LibraryWebApplication\LibraryWebApplication\bin\AutoMapper.dll
+C:\Users\Teo\Documents\GitHub\LibraryWebApplication\LibraryWebApplication\bin\AutoMapper.xml
+C:\Users\Teo\Documents\GitHub\LibraryWebApplication\LibraryWebApplication\obj\Debug\LibraryWebApplication.Migrations.InitialCreate.resources
+C:\Users\Teo\Documents\GitHub\LibraryWebApplication\LibraryWebApplication\obj\Debug\LibraryWebApplication.csproj.GenerateResource.Cache
+C:\Users\Teo\Documents\GitHub\LibraryWebApplication\LibraryWebApplication\obj\Debug\LibraryWebApplication.Migrations.DisableValid.resources

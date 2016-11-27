@@ -1,11 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using LibraryWebApplication.Models;
 
-namespace LibraryWebApplication.DTOs
+namespace LibraryWebApplication.Dtos
 {
     public class BookDto
-    {
+    { 
+        public string Name { get; set; }
+
+        public string Author { get; set; }
+
+        public byte[] CoverPicture { get; set; }
+
+        public Genre Genre { get; set; }
     }
 }

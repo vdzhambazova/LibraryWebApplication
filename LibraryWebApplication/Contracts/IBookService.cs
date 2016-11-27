@@ -1,17 +1,16 @@
-﻿namespace LibraryWebApplication.Services
+﻿using System.Linq;
+using LibraryWebApplication.Models;
+
+namespace LibraryWebApplication.Contracts
 {
     public interface IBookService
     {
-
-        //void Create book
-
-        //Search for Book
-
-        // DTOS!!!!!2 one for user one for books
-
         //Services work with dtos
 
         //service transfer entity to dto vice versa
 
+        void CreateBook(Book book);
+
+        IQueryable<Book> SearchForBook(string name);
     }
 }
