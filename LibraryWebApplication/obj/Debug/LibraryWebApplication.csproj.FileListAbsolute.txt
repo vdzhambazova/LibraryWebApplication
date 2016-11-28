@@ -53,3 +53,8 @@ C:\Users\Teo\Documents\GitHub\LibraryWebApplication\LibraryWebApplication\bin\Au
 C:\Users\Teo\Documents\GitHub\LibraryWebApplication\LibraryWebApplication\obj\Debug\LibraryWebApplication.Migrations.InitialCreate.resources
 C:\Users\Teo\Documents\GitHub\LibraryWebApplication\LibraryWebApplication\obj\Debug\LibraryWebApplication.csproj.GenerateResource.Cache
 C:\Users\Teo\Documents\GitHub\LibraryWebApplication\LibraryWebApplication\obj\Debug\LibraryWebApplication.Migrations.DisableValid.resources
+C:\Users\Teo\Documents\GitHub\LibraryWebApplication\LibraryWebApplication\obj\Debug\LibraryWebApplication.Migrations.dontKnow.resources
+C:\Users\Teo\Documents\GitHub\LibraryWebApplication\LibraryWebApplication\obj\Debug\LibraryWebApplication.Migrations.RemoveEnumList.resources
+C:\Users\Teo\Documents\GitHub\LibraryWebApplication\LibraryWebApplication\obj\Debug\LibraryWebApplication.Migrations.PageCount.resources
+C:\Users\Teo\Documents\GitHub\LibraryWebApplication\LibraryWebApplication\obj\Debug\LibraryWebApplication.Migrations.BookModelChange.resources
+C:\Users\Teo\Documents\GitHub\LibraryWebApplication\LibraryWebApplication\obj\Debug\LibraryWebApplication.Migrations.ValidationCover.resources

@@ -168,6 +168,26 @@
     <Compile Include="Migrations\201611271408566_DisableValid.Designer.cs">
       <DependentUpon>201611271408566_DisableValid.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611272003094_dontKnow.cs" />
+    <Compile Include="Migrations\201611272003094_dontKnow.Designer.cs">
+      <DependentUpon>201611272003094_dontKnow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611272008482_RemoveEnumList.cs" />
+    <Compile Include="Migrations\201611272008482_RemoveEnumList.Designer.cs">
+      <DependentUpon>201611272008482_RemoveEnumList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611272024581_PageCount.cs" />
+    <Compile Include="Migrations\201611272024581_PageCount.Designer.cs">
+      <DependentUpon>201611272024581_PageCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611272236550_BookModelChange.cs" />
+    <Compile Include="Migrations\201611272236550_BookModelChange.Designer.cs">
+      <DependentUpon>201611272236550_BookModelChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611281155252_ValidationCover.cs" />
+    <Compile Include="Migrations\201611281155252_ValidationCover.Designer.cs">
+      <DependentUpon>201611281155252_ValidationCover.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Attributes\PasswordAttribute.cs" />
@@ -207,6 +227,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Covers\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201611261516443_InitialCreate.resx">
@@ -214,6 +235,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611271408566_DisableValid.resx">
       <DependentUpon>201611271408566_DisableValid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611272003094_dontKnow.resx">
+      <DependentUpon>201611272003094_dontKnow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611272008482_RemoveEnumList.resx">
+      <DependentUpon>201611272008482_RemoveEnumList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611272024581_PageCount.resx">
+      <DependentUpon>201611272024581_PageCount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611272236550_BookModelChange.resx">
+      <DependentUpon>201611272236550_BookModelChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611281155252_ValidationCover.resx">
+      <DependentUpon>201611281155252_ValidationCover.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

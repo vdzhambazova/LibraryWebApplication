@@ -4,33 +4,38 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using LibraryWebApplication.Contracts;
+using LibraryWebApplication.Dtos;
+using LibraryWebApplication.Models;
+using LibraryWebApplication.Parser;
+using LibraryWebApplication.Services;
 
 namespace LibraryWebApplication.Controllers
 {
     public class BookListController : Controller
     {
-        public ActionResult FileUpload(HttpPostedFileBase file)
+        private IBookService bookService;
+
+        public BookListController()
         {
-            if (file != null)
-            {
-                string pic = System.IO.Path.GetFileName(file.FileName);
-                string path = System.IO.Path.Combine(
-                                       Server.MapPath("~/images/profile"), pic);
-                // file is uploaded
-                file.SaveAs(path);
-
-                // save the image path path to the database or you can send image 
-                // directly to database
-                // in-case if you want to store byte[] ie. for DB
-                using (MemoryStream ms = new MemoryStream())
-                {
-                    file.InputStream.CopyTo(ms);
-                    byte[] array = ms.GetBuffer();
-                }
-
-            }
-            // after successfully uploading redirect the user
-            return RedirectToAction("actionname", "controller name");
+            this.bookService = new BookService();
         }
+
+        [HttpPost]
+        public ActionResult SubmitBook(BookDto bookDto, HttpPostedFileBase file)
+        {
+
+            Book book = new Book();
+            //book = DTOParser.Parse(bookDto, book);
+            book.CoverPicture = bookDto.CoverPicture;
+            book.Genre = bookDto.Genre;
+            book.Name = bookDto.Name;
+            book.Author = bookDto.Author;
+            book.PageCount = bookDto.PageCount;
+            this.bookService.CreateBook(book);
+
+            return View("BookList");
+        }
+
     }
 }

@@ -1,15 +1,67 @@
-﻿
+﻿@using LibraryWebApplication.Dtos
+@model BookDto
 @{
     ViewBag.Title = "Book List";
 }
 
-<h2>BookList</h2>
+<div class="jumbotron">
+    <h1>Library home page</h1>
+    <p class="lead">Here you can add a book to the library.</p>
+</div>
 
-@using (Html.BeginForm("FileUpload", "Home", FormMethod.Post,
-                                        new { enctype = "multipart/form-data" }))
-{
-    <label for="file">Upload Image:</label>
-    <input type="file" name="file" id="file" style="width: 100%;" />
-    <input type="submit" value="Upload" class="submit" />
-}
+<div class="row">
+    <div class="col-md-4">
+        <section id="submitBookForm">
+            @using (Html.BeginForm("SubmitBook", "BookList", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="form-group">
+                    @Html.LabelFor(m => m.CoverPicture, new { @class = "col-md-2 control-label" })
 
+                    <div class="col-md-10">
+                         <input type="file" class="btn btn-default" /> 
+                    </div>
+                </div>
+
+                        <div class="dropdown">
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Genre, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-10">
+                                    @Html.EnumDropDownListFor(
+                        x => x.Genre,
+                        "Select Genre",
+                        new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Author, new { @class = "col-md-2 control-label" })
+                            <div class="col-md-10">
+                                @Html.TextBoxFor(m => m.Author, new { @class = "form-control" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Name, new { @class = "col-md-2 control-label" })
+                            <div class="col-md-10">
+                                @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.PageCount, new { @class = "col-md-2 control-label" })
+                            <div class="col-md-10">
+                                @Html.TextBoxFor(m => m.PageCount, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.PageCount, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Submit book" class="btn btn-default" />
+                            </div>
+                        </div>
+            }
+        </section>
+    </div>
+</div>

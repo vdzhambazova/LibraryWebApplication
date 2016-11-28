@@ -19,7 +19,6 @@ namespace LibraryWebApplication.Parser
                 cfg.CreateMap<TS, TD>();
             });
 
-            DTOParser.mapperConfiguration.AssertConfigurationIsValid();
             DTOParser.mapper = mapperConfiguration.CreateMapper();
 
             TD convertedDestination = mapper.Map(source, destination);

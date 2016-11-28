@@ -1,4 +1,6 @@
-﻿using LibraryWebApplication.Models;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Web;
+using LibraryWebApplication.Models;
 
 namespace LibraryWebApplication.Dtos
 {
@@ -8,7 +10,11 @@ namespace LibraryWebApplication.Dtos
 
         public string Author { get; set; }
 
-        public byte[] CoverPicture { get; set; }
+        [Display(Name = "Cover Picture")]
+        public HttpPostedFileBase CoverPicture { get; set; }
+
+        [Display(Name = "Pages Count")]
+        public int PageCount { get; set; }
 
         public Genre Genre { get; set; }
     }
